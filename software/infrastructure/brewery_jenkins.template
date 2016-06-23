@@ -129,7 +129,7 @@
 
             "files" : {
               "/usr/bin/aws" : { 
-                "source" : "https://raw.github.com/stelligent/continuous_integration_example/master/software/repo/aws", 
+                "source" : "https://raw.github.com/anthonyd-ness/continuous_integration_example/master/software/repo/aws", 
                 "mode" : "000777", 
                 "owner" : "tomcat",
                 "group" : "tomcat",
@@ -275,7 +275,7 @@
 		  "gem install capistrano --no-rdoc --no-ri\n",
         
           "rm -rf /usr/share/tomcat6/.jenkins\n",
-          "git clone git@github.com:stelligent/continuous_integration_example.git /usr/share/tomcat6/.jenkins\n",
+          "git clone git@github.com:anthonyd-ness/continuous_integration_example.git /usr/share/tomcat6/.jenkins\n",
 
           "# Pull down Jenkins Plugins\n",
 		  "wget -P /usr/share/tomcat6/.jenkins/plugins/ http://updates.jenkins-ci.org/download/plugins/s3/0.2.0/s3.hpi\n",

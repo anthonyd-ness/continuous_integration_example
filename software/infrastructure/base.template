@@ -33,6 +33,9 @@
             "m2.xlarge": {
                 "Arch": "64"
             }, 
+            "t2.micro": {
+                "Arch": "64"
+            }
             "t1.micro": {
                 "Arch": "64"
             }
@@ -86,7 +89,7 @@
             "Type": "String"
 				},
         "InstanceType": {
-            "Default": "m1.medium", 
+            "Default": "t2.micro", 
             "Description": "EC2 instance type, e.g. t1.micro, m1.small, m1.medium, m1.large, etc.", 
             "Type": "String"
         }, 
