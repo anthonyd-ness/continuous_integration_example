@@ -118,7 +118,7 @@
                 "tomcat6"   			  : [],
 				"ant"					  : [],
                                 "java-1.7.0-openjdk": [],
-				"java-1.7.0-openjdkdd-devel": [],
+				"java-1.7.0-openjdk-devel": [],
 				"mysql-server"			  : [],
 				"mysql"					  : [],
 				"git"					  : [],
