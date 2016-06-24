@@ -25,14 +25,14 @@
 	"PrivateBucket" : {
       "Description" : "S3 bucket for storing credentials",
       "Type" : "String",
-      "Default" : "cd000creds",
+      "Default" : "cd29creds",
       "ConstraintDescription" : "Must be a valid S3 Bucket"
     },
 
 	"PublicBucket" : {
 	  "Description" : "S3 bucket for storing build artifacts",
       "Type" : "String",
-      "Default" : "cd000artifacts",
+      "Default" : "cd29artifacts",
       "ConstraintDescription" : "Must be a valid S3 Bucket"
 	}
   },
