@@ -137,7 +137,7 @@
 
 			"files" : {
 	          "/usr/share/tomcat6/webapps/jenkins.war" : { 
-		        "source" : "https://updates.jenkins-ci.org/download/war/2.1/jenkins.war",
+		        "source" : "http://updates.jenkins-ci.org/download/war/2.1/jenkins.war",
 		        "mode"   : "000500", 
 		        "owner"  : "tomcat",
 		        "group"  : "tomcat" 
