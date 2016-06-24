@@ -115,7 +115,7 @@
           "config" : {
             "packages" : {
               "yum" : {
-                "tomcat6"   			  : [],
+                "tomcat7"   			  : [],
 				"ant"					  : [],
                                 "java-1.7.0-openjdk": [],
 				"java-1.7.0-openjdkdd-devel": [],
