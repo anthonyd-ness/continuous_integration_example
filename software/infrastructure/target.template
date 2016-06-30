@@ -104,6 +104,7 @@
 				"mysql"        : [],
 				"ant"		   : [],
 				"tomcat6"	   : []
+				"java-1.7.0-openjdk"	   : []
               }
             },
 
