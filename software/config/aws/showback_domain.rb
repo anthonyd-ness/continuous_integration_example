@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'aws-sdk'
+require 'aws-sdk-v1'
 load File.expand_path('../../aws.config', __FILE__)
 
 stackdomain=ARGV[0]
