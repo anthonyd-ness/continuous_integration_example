@@ -261,6 +261,7 @@
                               "mechanize" : [],
                               "chef" : [],
                               "aws-sdk" : [],
+                              "aws-sdk-v1" : [],
                               "systemu" : []
                             },
                             "yum": {

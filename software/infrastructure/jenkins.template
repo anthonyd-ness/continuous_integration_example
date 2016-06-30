@@ -8,7 +8,7 @@
     "KeyName" : {
       "Description" : "Name of an existing EC2 KeyPair to enable SSH access to the instances",
       "Type" : "String",
-	  "Default" : "cd29",
+      "Default" : "devop-sag",
       "MinLength": "1",
       "MaxLength": "64",
       "AllowedPattern" : "[-_ a-zA-Z0-9]*",
@@ -25,14 +25,14 @@
 	"PrivateBucket" : {
       "Description" : "S3 bucket for storing credentials",
       "Type" : "String",
-      "Default" : "cd29creds",
+      "Default" : "devops-ness-creds",
       "ConstraintDescription" : "Must be a valid S3 Bucket"
     },
 
 	"PublicBucket" : {
 	  "Description" : "S3 bucket for storing build artifacts",
       "Type" : "String",
-      "Default" : "cd29artifacts",
+      "Default" : "devops-ness-artifacts",
       "ConstraintDescription" : "Must be a valid S3 Bucket"
 	}
   },
@@ -132,12 +132,12 @@
             },
 
 			"sources" : {
-			  "/usr/share/tomcat6/scripts/" : "https://s3.amazonaws.com/sea2shore/jenkins_utilities.tar.gz"
+			  "/usr/share/tomcat6/scripts/" : "https://s3.amazonaws.com/devops-ness-resources/jenkins_utilities.tar.gz"
             },
 
 			"files" : {
 	          "/usr/share/tomcat6/webapps/jenkins.war" : { 
-		        "source" : "http://updates.jenkins-ci.org/download/war/2.1/jenkins.war",
+		        "source" : "https://s3.amazonaws.com/devops-ness-resources/jenkins.war",
 		        "mode"   : "000500", 
 		        "owner"  : "tomcat",
 		        "group"  : "tomcat" 
@@ -215,20 +215,21 @@
 		  "git clone git@github.com:anthonyd-ness/ciexample_jenkins.git /usr/share/tomcat6/.jenkins\n",
 		
 		  "# Installing Ruby 1.9.3 from RPM\n",
-		  "wget https://s3.amazonaws.com/ditcndo/resources/rpm/ruby-1.9.3p0-2.amzn1.x86_64.rpm\n",
+		  "wget https://s3.amazonaws.com/devops-ness-resources/ruby-1.9.3p0-2.amzn1.x86_64.rpm\n",
 		  "rpm -Uvh ruby-1.9.3p0-2.amzn1.x86_64.rpm\n",
 		
 		  "# Install Jenkins Plugins\n",
-		  "wget -P /usr/share/tomcat6/.jenkins/plugins/ http://updates.jenkins-ci.org/download/plugins/git/1.1.16/git.hpi\n",
-		  "wget -P /usr/share/tomcat6/.jenkins/plugins/ http://updates.jenkins-ci.org/download/plugins/s3/0.2.0/s3.hpi\n",
-		  "wget -P /usr/share/tomcat6/.jenkins/plugins/ http://updates.jenkins-ci.org/download/plugins/jenkins-cloudformation-plugin/0.9/jenkins-cloudformation-plugin.hpi\n",
-		  "wget -P /usr/share/tomcat6/.jenkins/plugins/ http://updates.jenkins-ci.org/download/plugins/build-pipeline-plugin/1.2.3/build-pipeline-plugin.hpi\n",
-		  "wget -P /usr/share/tomcat6/.jenkins/plugins/ http://updates.jenkins-ci.org/download/plugins/github/1.2/github.hpi\n",
-		  "wget -P /usr/share/tomcat6/.jenkins/plugins/ http://updates.jenkins-ci.org/download/plugins/dashboard-view/2.2/dashboard-view.hpi\n",
+		  "wget -P /usr/share/tomcat6/.jenkins/plugins/ https://s3.amazonaws.com/devops-ness-resources/git.hpi\n",
+		  "wget -P /usr/share/tomcat6/.jenkins/plugins/ https://s3.amazonaws.com/devops-ness-resources/s3.hpi\n",
+		  "wget -P /usr/share/tomcat6/.jenkins/plugins/ https://s3.amazonaws.com/devops-ness-resources/jenkins-cloudformation-plugin.hpi\n",
+		  "wget -P /usr/share/tomcat6/.jenkins/plugins/ https://s3.amazonaws.com/devops-ness-resources/build-pipeline-plugin.hpi\n",
+		  "wget -P /usr/share/tomcat6/.jenkins/plugins/ https://s3.amazonaws.com/devops-ness-resources/github.hpi\n",
+		  "wget -P /usr/share/tomcat6/.jenkins/plugins/ https://s3.amazonaws.com/devops-ness-resources/dashboard-view.hpi\n",
 		
 		  "# Install Bundler\n",
 		  "gem install bundler\n",
 		  "gem install aws-sdk\n",
+		  "gem install aws-sdk-v1\n",
 		  "gem install cucumber\n",
 		  "gem install net-ssh\n",
 		  "gem install capistrano\n",
@@ -257,7 +258,7 @@
 		  "echo \"AWS_CLOUDFORMATION_HOME=/opt/aws/apitools/cfn/\" >> /etc/sysconfig/tomcat6\n",
 		
 		  "# Add CloudFormation CLI tools\n",
-		  "wget -P /opt/aws/apitools/ https://s3.amazonaws.com/ditcndo/resources/aws_cli/CloudFormation-CLI.tar.gz\n",
+		  "wget -P /opt/aws/apitools/ https://s3.amazonaws.com/devops-ness-resources/CloudFormation-CLI.tar.gz\n",
 		  "tar -C /opt/aws/apitools/ -xf /opt/aws/apitools/CloudFormation-CLI.tar.gz\n",
 		
 		  "# Setup deployment directory\n",
