@@ -103,7 +103,7 @@
 				"mysql-server" : [],
 				"mysql"        : [],
 				"ant"		   : [],
-				"tomcat6"	   : []
+				"tomcat6"	   : [],
 				"java-1.7.0-openjdk"	   : []
               }
             },

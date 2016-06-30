@@ -127,11 +127,10 @@
 				"sqlite-devel"			  : [],
 				"libxml2-devel"			  : [],
 				"libxslt-devel"			  : [],
-				"libyaml-devel"			  : []
-                                "rubygem20-io-console"  : [],
-				"ruby20-devel"          : [],
-				"rubygems20-devel"      : [],
-
+				"libyaml-devel"			  : [],
+				"rubygem20-io-console"			  : [],
+				"ruby20-devel"			  : [],
+				"rubygems20-devel"			  : []
               }
             },
 
