@@ -128,6 +128,7 @@
 				"libxml2-devel"			  : [],
 				"libxslt-devel"			  : [],
 				"libyaml-devel"			  : [],
+				"rubygem20"			  : [],
 				"rubygem20-io-console"			  : [],
 				"ruby20-devel"			  : [],
 				"rubygems20-devel"			  : []
@@ -220,8 +221,8 @@
 		  "# Installing Ruby 1.9.3 from RPM\n",
 		  "#wget https://s3.amazonaws.com/devops-ness-resources/ruby-1.9.3p0-2.amzn1.x86_64.rpm\n",
 		  "#rpm -Uvh ruby-1.9.3p0-2.amzn1.x86_64.rpm\n",
-		  "yum remove ruby\n",
-		  "yum install ruby\n",
+		  "#yum remove ruby\n",
+		  "#yum install ruby\n",
 		
 		  "# Install Jenkins Plugins\n",
 		  "wget -P /usr/share/tomcat6/.jenkins/plugins/ https://s3.amazonaws.com/devops-ness-resources/git.hpi\n",
