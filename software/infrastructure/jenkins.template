@@ -216,13 +216,13 @@
 		  "# Update Jenkins with versioned configuration\n",
 		  "rm -rf /usr/share/tomcat6/.jenkins\n",
 		  "git clone git@github.com:anthonyd-ness/ciexample_jenkins.git /usr/share/tomcat6/.jenkins\n",
-                  "cp -r /home/ec2-user/temp/ /usr/share/tomcat6/.jenkins/\n",
+                  "#cp -r /home/ec2-user/temp/ /usr/share/tomcat6/.jenkins/\n",
 		
 		  "# Installing Ruby 1.9.3 from RPM\n",
 		  "#wget https://s3.amazonaws.com/devops-ness-resources/ruby-1.9.3p0-2.amzn1.x86_64.rpm\n",
 		  "#rpm -Uvh ruby-1.9.3p0-2.amzn1.x86_64.rpm\n",
-		  "#yum remove ruby\n",
-		  "#yum install ruby\n",
+		  "yum remove -y ruby\n",
+		  "yum install -y ruby\n",
 		
 		  "# Install Jenkins Plugins\n",
 		  "wget -P /usr/share/tomcat6/.jenkins/plugins/ https://s3.amazonaws.com/devops-ness-resources/git.hpi\n",
