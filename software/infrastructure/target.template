@@ -150,7 +150,6 @@
 		  "service mysqld start\n",
 		  "/usr/bin/mysqladmin -u root password 'mysql'\n",
 		  "service tomcat6 start \n",
-		  "#mysql -u root -pmysql -e "grant all privileges on *.* to 'jenkins'@'%' identified by 'j3nkins' with grant option;"\n",
 		
 		  "# Add Public key for passwordless authentication from Jenkins Instance\n",
 		  "cat /home/ec2-user/id_rsa.pub >> /home/ec2-user/.ssh/authorized_keys\n",
