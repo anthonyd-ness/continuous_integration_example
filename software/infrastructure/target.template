@@ -150,6 +150,11 @@
 		  "service mysqld start\n",
 		  "/usr/bin/mysqladmin -u root password 'mysql'\n",
 		  "service tomcat6 start \n",
+
+
+		  "wget https://s3.amazonaws.com/devops-ness-resources/sed.sh /home/ec2-user/ \n",
+		  "/bin/sh /home/ec2-user/sed.sh \n",
+
 		  "wget https://s3.amazonaws.com/devops-ness-resources/mysql.sh /home/ec2-user/ \n",
 		  "/bin/sh /home/ec2-user/mysql.sh \n",
 		
